@@ -10,7 +10,7 @@ const Formulario = () => {
         <span className=" text-indigo-600 font-bold">Administrarlos</span>
       </p>
 
-      <form className="bg-white shadow-xl rounded-md py-5 px-5 mb-10">
+      <form className="bg-white shadow-xl rounded-xl py-5 px-5 mb-10">
         <div className=" mb-5">
           <label htmlFor="mascota" className="block text-gray-700 font-bold">NOMBRE MASCOTA</label>
           <input
