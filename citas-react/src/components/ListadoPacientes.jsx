@@ -1,12 +1,13 @@
 import Paciente from "./Paciente";
 
-const ListadoPacientes = ({ pacientes, setPaciente }) => {
+const ListadoPacientes = ({ pacientes, setPaciente, eliminarPaciente }) => {
 
   const PacientesList = pacientes.map((paciente, index) => (
     <Paciente 
       key={paciente.id} 
       paciente={paciente} 
-      setPaciente={setPaciente}/>
+      setPaciente={setPaciente}
+      eliminarPaciente={eliminarPaciente}/>
   ));
 
   return (
