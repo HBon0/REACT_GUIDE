@@ -1,15 +1,17 @@
 import Paciente from "./Paciente";
 
-const ListadoPacientes = ({ pacientes }) => {
-
-
+const ListadoPacientes = ({ pacientes, setPaciente }) => {
 
   const PacientesList = pacientes.map((paciente, index) => (
-    <Paciente key={paciente.id} paciente={paciente} />
+    <Paciente 
+      key={paciente.id} 
+      paciente={paciente} 
+      setPaciente={setPaciente}/>
   ));
 
   return (
-    <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
+    <>
+      <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
       {pacientes && pacientes.length ? (
         <>
           <h2 className="font-black text-3xl text-center">Listado Pacientes</h2>
@@ -34,6 +36,8 @@ const ListadoPacientes = ({ pacientes }) => {
         </>
       )}
     </div>
+    </>
+    
   );
 }
 
