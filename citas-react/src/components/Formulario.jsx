@@ -7,7 +7,6 @@ const Formulario = ({setPacientes, setPaciente, pacientes, paciente}) => {
   const [email, setEmail] = useState("");
   const [fecha, setFecha] = useState("");
   const [sintomas, setSintomas] = useState("");
-
   const [error, setError] = useState(false);
 
   useEffect(() => {
