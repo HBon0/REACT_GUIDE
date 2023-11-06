@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useTransition } from 'react';
 import CerrarBtn from '../img/cerrar.svg'
 import Mensaje from './Mensaje';
 
@@ -34,13 +34,9 @@ const Modal = ({
             return;
         }
 
-        const Gasto = {
-            nombre,
-            cantidad,
-            categoria
-        }
+        guardarGasto({nombre, cantidad, categoria});
 
-        guardarGasto(Gasto);
+        handleOcultarModal();
     };
 
   return (
