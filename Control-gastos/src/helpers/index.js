@@ -4,3 +4,14 @@ export const generarId = () => {
 
     return ramdom + fecha;
 }
+
+export const formatearFecha = fecha => {
+    const fechaNueva = new Date(fecha);
+
+    const Opciones = {
+        year: 'numeric',
+        month: 'long',
+        day: '2-digit'
+    }
+    return fechaNueva.toLocaleDateString('es-ES',Opciones);
+}
